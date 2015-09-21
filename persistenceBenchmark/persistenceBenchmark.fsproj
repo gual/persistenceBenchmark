@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9F10B7E-8291-47F6-884B-09F691A66B2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>persistenceBenchmark</RootNamespace>
+    <AssemblyName>persistenceBenchmark</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="Mono.Posix">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RiakClient">
+      <HintPath>..\packages\RiakClient.2.1.1\lib\net40\RiakClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharpCouch">
+      <HintPath>..\packages\FSharpCouch.0.2.0.0\Lib\FSharpCouch.dll</HintPath>
+    </Reference>
+    <Reference Include="mindtouch.dream">
+      <HintPath>..\packages\DreamSeat.1.2.0.0\lib\net40\mindtouch.dream.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\DreamSeat.1.2.0.0\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\DreamSeat.1.2.0.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="DreamSeat">
+      <HintPath>..\packages\DreamSeat.1.2.0.0\lib\net40\DreamSeat.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <None Include="Utils.fsx" />
+    <None Include="Connection.fsx" />
+    <Compile Include="Aerospike.fsx" />
+    <None Include="Riak.fsx" />
+    <None Include="packages.config" />
+    <None Include="App.config" />
+    <None Include="Couchdb.fsx" />
+    <Compile Include="Couch.fsx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.1\Framework\v4.0\Microsoft.FSharp.Targets" />
+  <ItemGroup>
+  </ItemGroup>
+</Project>

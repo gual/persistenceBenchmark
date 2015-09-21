@@ -1,0 +1,59 @@
+#Autosave files
+*~
+
+# Build/test output
+obj
+bin
+test-results
+
+# VS sometimes writes these for no apparent reason
+_UpgradeReport_Files
+UpgradeLog.*
+
+# Per-user data
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
+*.sublime-workspace
+*.mdb
+
+# ReSharper
+*_Resharper.*
+*.Resharper
+
+# dotCover
+*.dotCover
+
+# npm log files
+npm-debug.log
+
+# frontal config file
+Frontal/Resources/cfg.json
+Frontal/Resources/commit.txt
+src/ClientTests/FrontalTests/Resources/cfg.json
+src/ClientTests/FrontalTests/Resources/commit.txt
+
+/packages/
+!packages/repositories.config
+
+.idea
+Libs/Native/libAkMemoryMgr.a
+Libs/Native/libAkMusicEngine.a
+Libs/Native/libAkSoundEngine.a
+Libs/Native/libAkStreamMgr.a
+
+TestResult.xml
+*.orig
+Libs/
+UpgradeLog*.htm
+Backup*/
+.paket/paket.exe
+.fake/*
+
+# FServer
+FServer/packages/*
+fserver.log
+local_account_store/*
